@@ -67,7 +67,7 @@ section#appointment-tracker {
   /* max-height: 100%; */
   border-radius: 20px;
   padding: 15px 25px;
-  background: url('./front-shapes.png') right bottom / contain no-repeat  fixed;
+  background: url('./front-shapes.png') right bottom / contain no-repeat fixed;
 }
 
 .left-side-appointment-form {
@@ -133,7 +133,7 @@ section#appointment-tracker {
 
 
 
- 
+
 
 
   /* Selector for other inputs  */
@@ -180,20 +180,32 @@ section#appointment-tracker {
 
 }
 
+
+
+
 .right-side-appointment-calender {
   flex: 1;
   width: 60%;
   height: 100%;
   padding: 10px;
   align-self: center;
-  font-size: .7rem;
-}
-
-
-.glass {
-  background: var(--color-dark-mild);
+  font-size: .9rem;
+  background-image: radial-gradient(circle at top left, rgba(128, 16, 184, 0.547), rgba(65, 5, 176, 0.283), transparent),
+    radial-gradient(circle at bottom right, rgba(4, 141, 132, 0.464), rgba(13, 215, 184, 0.651), transparent),
+    radial-gradient(circle at bottom left, rgba(199, 105, 17, 0.811), rgba(195, 6, 170, 0.597), transparent);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 20px;
+  /* color:var(--dark-navi); */
+}
+
+.fc-day {
+  transition: background-color 0.3s ease;
+  cursor:pointer;
+}
+
+.fc-day:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
