@@ -18,7 +18,7 @@
 }
 
 body {
-  font-size: 16px;
+  font-size: 17px;
   overflow: hidden auto;
   font-family: 'Nunito', sans-serif;
   background: var(--dark-navi);
@@ -211,6 +211,7 @@ section#appointment-tracker {
 
 
 /* Responsive Media Queries  */
+/* For large screen devices  */
 @media (max-width: 1200px) {
   section#appointment-tracker {
     flex-direction: column;
@@ -224,9 +225,12 @@ section#appointment-tracker {
   }
 }
 
+/* For medium sized devices  */
+
 @media (max-width: 768px) {
   body {
     font-size: 14px;
+    text-align: center;
   }
 
   header h1.header_title {
@@ -245,6 +249,28 @@ section#appointment-tracker {
   .appointment-container_head p,
   .right-side-appointment-calender {
     font-size: 0.8rem;
+  }
+
+}
+
+/* For extra small devices  */
+@media (max-width: 576px) {
+  .appointment-container {
+    gap: 1rem;
+  }
+
+  #fullname {
+    flex-direction: column;
+  }
+
+  #fullname input {
+    flex: none;
+    width: 100%;
+  }
+
+  form input:not(#fullname input),
+  textarea {
+    width: 100%;
   }
 
   button[type="submit"] {
