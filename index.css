@@ -67,6 +67,7 @@ section#appointment-tracker {
   /* max-height: 100%; */
   border-radius: 20px;
   padding: 15px 25px;
+  background: url('./front-shapes.png') right bottom / contain no-repeat  fixed;
 }
 
 .left-side-appointment-form {
