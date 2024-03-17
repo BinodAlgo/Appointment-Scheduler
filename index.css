@@ -30,7 +30,8 @@ body {
   font-size: 17px;
   overflow: hidden auto;
   font-family: 'Nunito', sans-serif;
-  background: var(--test-bg-color);
+  background: var(--dark-navi);
+  color:var(--pure-white);
   line-height: 1.5;
 
 }
@@ -51,7 +52,7 @@ header {
 header {
   p {
     text-align: center;
-    color: var(--dark-navi);
+    color: var(--pure-white);
     margin-top: 30px;
     font-size: 22px;
 
@@ -78,7 +79,7 @@ section#appointment-tracker {
   /* max-height: 100%; */
   border-radius: 20px;
   padding: 15px 25px;
-  background: url('../icons/front-shapes.png') right bottom / contain no-repeat fixed;
+  background: url('front-shapes.png') right bottom / contain no-repeat fixed;
 }
 
 .left-side-appointment-form {
@@ -128,7 +129,6 @@ section#appointment-tracker {
     gap: 1rem;
     flex-direction: column;
     justify-content: space-around;
-
   }
 
 
@@ -139,8 +139,9 @@ section#appointment-tracker {
     outline: none;
     color: white;
     border: .8px solid #300a323d;
-    background: var(--test-placeholder-color);
+    background: var(--color-dark-mild);
     border-radius: 6px;
+    font-family: 'Nunito',sans-serif;
   }
 
 
@@ -152,9 +153,9 @@ section#appointment-tracker {
     outline: none;
     color: white;
     border: .8px solid #300a323d;
-    background: var(--test-placeholder-color);
-    border-radius: 6px;
+    background: var(--color-dark-mild);
     font-family: 'Nunito', sans-serif;
+    border-radius: 6px;
     resize: none;
   }
 
@@ -276,8 +277,8 @@ div button#submitbtn:hover {
     gap: 1rem;
   }
 
-  #userSelection {
-    font-size: 16px;
+  #userSelection span {
+    font-size: 12px;
   }
 
   #fullname {
@@ -311,24 +312,23 @@ div button#submitbtn:hover {
   font-size: 20px;
   font-weight: bold;
   margin-left: 15px;
-  background: linear-gradient(to right, #09423d 30%, #40033f);
+  background: linear-gradient(to right, #bac26d 30%, #54d6bc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-
+  background-clip: text;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--dark-navi);
+  color: var(--color-gray);
 }
 
 
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px #9854bb inset !important;
+input:-webkit-autofill,textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #230034 inset !important;
 }
 
 input:-webkit-autofill {
-  -webkit-text-fill-color: var(--dark-navi) !important;
+  -webkit-text-fill-color: var(--pure-white) !important;
 
 }
