@@ -7,6 +7,9 @@
   <title>Appointify</title>
   <link rel="stylesheet" href="index.css">
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+   <script defer type="module" src="helpers/renderCalendar.js"> </script>
+  <script defer type="module" src="helpers/dataValidator.js"></script>
+  <script defer type="module" src="helpers/clearForm.js"></script>
 </head>
 
 <body>
@@ -61,8 +64,9 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       let calendarEl = document.getElementById('calendar');
+      let calender;
        if (calendarEl) {
-        let calendar = new FullCalendar.Calendar(calendarEl, {
+         calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: 'dayGridMonth'
         });
 
@@ -70,6 +74,9 @@
       } else {
         console.error('Calendar element not found');
       }
+      calendar.on('dateClick', function (info) {
+        console.log('clicked on ' + info.dateStr);
+      });
     })
   </script>
 </body>
